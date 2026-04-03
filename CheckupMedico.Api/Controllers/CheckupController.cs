@@ -5,6 +5,7 @@
     using CheckupMedico.Application.Service.Interface.Checkup;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using System.Globalization;
     using System.Security.Claims;
 
     [ApiController]
@@ -25,11 +26,14 @@
         public IActionResult Create([FromBody] HospitalListDto request)
         {
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var email = User.FindFirst(ClaimTypes.Email)?.Value;
             var fullname = User.FindFirst(ClaimTypes.Name)?.Value;
             var birthdate = User.FindFirst(ClaimTypes.DateOfBirth)?.Value;
-            var society = User.FindFirst(ClaimTypes.Sid)?.Value;
-            var birthDate = DateTime.Parse(birthdate);
+
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(fullname))
+                return Failure(["Required identity claims are missing."], "Invalid user context.");
+
+            if (!DateTime.TryParse(birthdate, CultureInfo.InvariantCulture, DateTimeStyles.None, out var birthDate))
+                return Failure(["Date of birth claim is missing or invalid."], "Invalid user context.");
 
             var fileBytes = _service.Create(request, userId, fullname, birthDate);
 

@@ -1,0 +1,117 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+# Branches → Environments mapping:
+#   main  →  Development  →  appsettings.Development.json
+#   pprd  →  Pprd         →  appsettings.Pprd.json
+#   prod  →  Prod         →  appsettings.Prod.json
+#
+# IMPORTANT: Set ASPNETCORE_ENVIRONMENT in each App Service's Application Settings:
+#   Development App Service → ASPNETCORE_ENVIRONMENT = Development
+#   PPRD App Service        → ASPNETCORE_ENVIRONMENT = Pprd
+#   PROD App Service        → ASPNETCORE_ENVIRONMENT = Prod
+
+name: Build and deploy ASP.Net Core app to Azure Web App - checkupmedicodummyapi
+
+on:
+  push:
+    branches:
+      - main
+      - pprd
+      - prod
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: read #This is required for actions/checkout
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.x"
+
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
+
+      - name: dotnet publish
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: .net-app
+          path: ${{env.DOTNET_ROOT}}/myapp
+
+  # ─── Development (branch: main) ────────────────────────────────────────────
+  deploy-development:
+    runs-on: windows-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: Development
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: .net-app
+
+      - name: Deploy to Azure Web App - Development
+        id: deploy-to-webapp-dev
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "checkupmedicodummyapi" # REPLACE: nombre del App Service de Development
+          slot-name: "Production"
+          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6B67D08B8B084F0383E607CA982E5A3E }} # REPLACE si el secret cambia
+
+  # ─── PPRD (branch: pprd) ────────────────────────────────────────────────────
+  deploy-pprd:
+    runs-on: windows-latest
+    needs: build
+    if: github.ref == 'refs/heads/pprd'
+    environment:
+      name: Pprd
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: .net-app
+
+      - name: Deploy to Azure Web App - PPRD
+        id: deploy-to-webapp-pprd
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "checkupmedicodummyapi-pprd" # REPLACE: nombre del App Service de PPRD
+          slot-name: "Production"
+          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PPRD }} # REPLACE: nombre del secret de PPRD
+
+  # ─── PROD (branch: prod) ────────────────────────────────────────────────────
+  deploy-prod:
+    runs-on: windows-latest
+    needs: build
+    if: github.ref == 'refs/heads/prod'
+    environment:
+      name: Prod
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: .net-app
+
+      - name: Deploy to Azure Web App - PROD
+        id: deploy-to-webapp-prod
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "checkupmedicodummyapi-prod" # REPLACE: nombre del App Service de PROD
+          slot-name: "Production"
+          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PROD }} # REPLACE: nombre del secret de PROD

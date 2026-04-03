@@ -22,6 +22,9 @@
         {
             var billingData = _repoLocalFileBillingConfig.GetAll().FirstOrDefault();
 
+            if (billingData is null)
+                throw new InvalidOperationException("Billing configuration was not found.");
+
             _checkupITESMDoc.Build(new CheckupITESMDto()
             {
                 City = req.City,
@@ -29,7 +32,7 @@
                 Hospital = req.Name,
                 Campus = req.Campus,
                 Responsible = req.Responsible,
-                Institute = billingData?.Institute,
+                Institute = billingData.Institute,
                 PayrollId = payrollId,
                 Name = fullName,
                 BirthDate = birthDate,
@@ -37,7 +40,7 @@
                 LocationDetails = req.LocationDetails,
                 ContactDetails = req.ContactDetails,
                 Email = req.Email,
-                FullName = billingData?.FullName,
+                FullName = billingData.FullName,
             });
 
             return new MemoryStream(_checkupITESMDoc.GetDoc());

@@ -22,6 +22,7 @@
         });
 
         public KitEntity Get(string institute, SexEnum gender, decimal age) 
-            => GetAll().FirstOrDefault(x=> x.HospitalName == institute && x.Gender == gender && age > x.MinimumAge && age < x.MaximumAge); 
+            => GetAll().FirstOrDefault(x => x.HospitalName == institute && x.Gender == gender && age > x.MinimumAge && age < x.MaximumAge)
+               ?? throw new KeyNotFoundException($"No kit was found for institute '{institute}', gender '{gender}' and age '{age}'.");
     }
 }

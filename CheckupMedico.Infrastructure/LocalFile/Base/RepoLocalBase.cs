@@ -21,7 +21,7 @@
 
         protected List<TEntity> Load(Func<IXLRow, TEntity> map)
         {
-            if (_cache.TryGetValue(_cacheKey, out List<TEntity> cached))
+            if (_cache.TryGetValue(_cacheKey, out List<TEntity>? cached) && cached is not null)
                 return cached;
 
             if (!File.Exists(_filePath))

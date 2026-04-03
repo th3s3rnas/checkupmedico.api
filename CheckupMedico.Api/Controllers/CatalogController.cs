@@ -6,6 +6,7 @@
     using CheckupMedico.Domain.Enum;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using System.Globalization;
     using System.Security.Claims;
 
     [ApiController]
@@ -34,15 +35,15 @@
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public IActionResult GetHospitalsByCampus([FromBody] HospitalsReqDto request)
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var email = User.FindFirst(ClaimTypes.Email)?.Value;
-            var fullname = User.FindFirst(ClaimTypes.Name)?.Value;
             var birthdate = User.FindFirst(ClaimTypes.DateOfBirth)?.Value;
-            var society = User.FindFirst(ClaimTypes.Sid)?.Value;
             var gender = User.FindFirst(ClaimTypes.Gender)?.Value;
 
-            var birthDate = DateTime.Parse(birthdate);
-            var genderType = Convert.ToInt16(gender);
+            if (!DateTime.TryParse(birthdate, CultureInfo.InvariantCulture, DateTimeStyles.None, out var birthDate))
+                return Failure(["Date of birth claim is missing or invalid."], "Invalid user context.");
+
+            if (!short.TryParse(gender, out var genderType) || !Enum.IsDefined(typeof(SexEnum), (int)genderType))
+                return Failure(["Gender claim is missing or invalid."], "Invalid user context.");
+
             request.Gender = (SexEnum)genderType;
 
             var data = _serviceCatalog.GetHospitalsByCampus(request, birthDate);
