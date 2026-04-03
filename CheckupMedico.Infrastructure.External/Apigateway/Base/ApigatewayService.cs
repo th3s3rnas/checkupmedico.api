@@ -24,7 +24,7 @@
             _logger = logger;
         }
 
-        public ResponseDto<TokenResponse> GetToken()
+        public async Task<ResponseDto<TokenResponse>> GetTokenAsync()
         {
             var client = _httpClientFactory.CreateClient();
             WebService wsToken = _apigatewayStructure.WebServices.Where(x => x.Name == "Token").FirstOrDefault();
@@ -35,8 +35,8 @@
 
             client.DefaultRequestHeaders.Add(wsToken.Headers[0].Attribute, wsToken.Headers[0].Value);
             client.DefaultRequestHeaders.TryAddWithoutValidation(wsToken.Headers[1].Attribute, wsToken.Headers[1].Value);
-            var httpResponse = client.PostAsync(wsToken.URL, new FormUrlEncodedContent(contentList)).Result;
-            string response = httpResponse.Content.ReadAsStringAsync().Result;
+            var httpResponse = await client.PostAsync(wsToken.URL, new FormUrlEncodedContent(contentList));
+            string response = await httpResponse.Content.ReadAsStringAsync();
 
             // Validar la respuesta del web service
             ResponseDto<string> validateResponse = _responseMessagesHelper.ValidateResponseWebService(httpResponse, response);
@@ -47,7 +47,7 @@
             return new ResponseDto<TokenResponse>(token, validateResponse.Message);
         }
 
-        public ResponseDto<TokenJWTResponse> GetTokenJWT(string token, UserRequestDto user)
+        public async Task<ResponseDto<TokenJWTResponse>> GetTokenJWTAsync(string token, UserRequestDto user)
         {
             var client = _httpClientFactory.CreateClient();
             WebService wsTokenJWT = _apigatewayStructure.WebServices.Where(x => x.Name == "TokenJWT").FirstOrDefault();
@@ -57,8 +57,8 @@
             client.DefaultRequestHeaders.Add(wsTokenJWT.Body[0].Attribute, user.payroll);
             client.DefaultRequestHeaders.Add(wsTokenJWT.Body[1].Attribute, user.email);
             client.DefaultRequestHeaders.Add(wsTokenJWT.Body[2].Attribute, "Colaborador");
-            var httpResponse = client.PostAsync(wsTokenJWT.URL, null).Result;
-            var response = httpResponse.Content.ReadAsStringAsync().Result;
+            var httpResponse = await client.PostAsync(wsTokenJWT.URL, null);
+            var response = await httpResponse.Content.ReadAsStringAsync();
             // Validar la respuesta del web service
             ResponseDto<string> validateResponse = _responseMessagesHelper.ValidateResponseWebService(httpResponse, response);
             if (!validateResponse.Succeeded)

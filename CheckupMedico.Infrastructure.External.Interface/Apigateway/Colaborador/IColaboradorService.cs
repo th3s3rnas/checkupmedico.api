@@ -3,6 +3,6 @@
     using CheckupMedico.Infrastructure.External.Model.Apigateway;
     public interface IColaboradorService
     {
-        ResponseDto<UserProfileResponseDto> GetEmployeeInformation(string payroll, string email, string societyKey);
+        Task<ResponseDto<UserProfileResponseDto>> GetEmployeeInformationAsync(string payroll, string email, string societyKey);
     }
 }

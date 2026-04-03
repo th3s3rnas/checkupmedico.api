@@ -24,9 +24,9 @@
         [HttpPost("token")]
         [ProducesResponseType(typeof(ApiResponseDto<AuthResponseDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponseDto<string>), StatusCodes.Status401Unauthorized)]
-        public IActionResult GenerateToken([FromBody] AuthRequestDto request)
+        public async Task<IActionResult> GenerateToken([FromBody] AuthRequestDto request)
         {
-            var token = _authService.Authenticate(request);
+            var token = await _authService.AuthenticateAsync(request);
 
             if (token == null)
                 return Unauthorized();

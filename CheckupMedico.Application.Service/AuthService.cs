@@ -24,7 +24,7 @@
             _colaboradorService = colaboradorService;
         }
 
-        public AuthResponseDto Authenticate(AuthRequestDto req)
+        public async Task<AuthResponseDto> AuthenticateAsync(AuthRequestDto req)
         {
             var result = new AuthResponseDto();
             if (string.IsNullOrWhiteSpace(req.IdCalaborador))
@@ -36,7 +36,7 @@
             if (string.IsNullOrWhiteSpace(req.Sociedad))
                 throw new ValidationException(new List<string> { "Sociedad es requerida" });
 
-            var dataProfile = _colaboradorService.GetEmployeeInformation(req.IdCalaborador, req.Email, req.Sociedad);
+            var dataProfile = await _colaboradorService.GetEmployeeInformationAsync(req.IdCalaborador, req.Email, req.Sociedad);
 
             if (dataProfile != null)
                 result = GenerateJWT(dataProfile.Data);

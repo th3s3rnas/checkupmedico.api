@@ -15,14 +15,14 @@
         {
         }
 
-        public ResponseDto<UserProfileResponseDto> GetEmployeeInformation(string payroll, string email, string societyKey)
+        public async Task<ResponseDto<UserProfileResponseDto>> GetEmployeeInformationAsync(string payroll, string email, string societyKey)
         {
             var client = _httpClientFactory.CreateClient();
             WebService wsToken = _apigatewayStructure.WebServices.Where(x => x.Name == "GetEmployeeInformation").FirstOrDefault();
             client.BaseAddress = new Uri(wsToken.Server);
 
-            var token = GetToken();
-            var tokenJWT = GetTokenJWT(token.Data.access_token, new UserRequestDto() { email = email, payroll = payroll });
+            var token = await GetTokenAsync();
+            var tokenJWT = await GetTokenJWTAsync(token.Data.access_token, new UserRequestDto() { email = email, payroll = payroll });
 
             string url = wsToken.URL.Replace("{payroll}", Uri.EscapeDataString(payroll));
 
@@ -43,8 +43,8 @@
             var request = new HttpRequestMessage(HttpMethod.Get, url);
 
             // Enviar request
-            var httpResponse = client.Send(request);
-            string responseContent = httpResponse.Content.ReadAsStringAsync().Result;
+            var httpResponse = await client.SendAsync(request);
+            string responseContent = await httpResponse.Content.ReadAsStringAsync();
 
             // Validar respuesta
             var validateResponse = _responseMessagesHelper.ValidateResponseWebService(httpResponse, responseContent);
