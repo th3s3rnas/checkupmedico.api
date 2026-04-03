@@ -15,17 +15,68 @@ name: Build and deploy ASP.Net Core app to Azure Web App - checkupmedicodummyapi
 
 on:
   push:
-    branches:
-      - main
-      - pprd
-      - prod
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
   workflow_dispatch:
 
 jobs:
-  build:
+  test:
+    name: Unit Tests
     runs-on: windows-latest
     permissions:
-      contents: read #This is required for actions/checkout
+      contents: read
+      checks: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.x"
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Run unit tests
+        run: >
+          dotnet test CheckupMedico.Test/CheckupMedico.Test.csproj
+          --configuration Release
+          --no-restore
+          --logger "trx;LogFileName=test-results.trx"
+          --collect:"XPlat Code Coverage"
+          --results-directory TestResults
+
+      - name: Publish test report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: "CheckupMedico – Unit Tests"
+          path: "TestResults/test-results.trx"
+          reporter: dotnet-trx
+          fail-on-error: true
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: TestResults/**/coverage.cobertura.xml
+          retention-days: 14
+
+  build:
+    name: Build & Publish
+    runs-on: windows-latest
+    needs: test
+    if: >
+      github.event_name == 'push' &&
+      (github.ref == 'refs/heads/main' ||
+       github.ref == 'refs/heads/pprd' ||
+       github.ref == 'refs/heads/prod')
+    permissions:
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
