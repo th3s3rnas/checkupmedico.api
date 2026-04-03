@@ -1,0 +1,17 @@
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Application.Doc.Interface.deps.json
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Application.Doc.Interface.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Application.Doc.Interface.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Application.Dto.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Domain.Enum.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Application.Dto.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\bin\Debug\net10.0\CheckupMedico.Domain.Enum.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.csproj.AssemblyReference.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.AssemblyInfoInputs.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.AssemblyInfo.cs
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.csproj.CoreCompileInputs.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupM.2F988D8A.Up2Date
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\refint\CheckupMedico.Application.Doc.Interface.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\CheckupMedico.Application.Doc.Interface.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Application.Doc.Interface\obj\Debug\net10.0\ref\CheckupMedico.Application.Doc.Interface.dll

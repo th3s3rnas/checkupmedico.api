@@ -1,0 +1,15 @@
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\bin\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.deps.json
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\bin\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\bin\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\bin\Debug\net10.0\CheckupMedico.Domain.Enum.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\bin\Debug\net10.0\CheckupMedico.Domain.Enum.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.csproj.AssemblyReference.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.AssemblyInfoInputs.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.AssemblyInfo.cs
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.csproj.CoreCompileInputs.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupM.0772352A.Up2Date
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\refint\CheckupMedico.Infrastructure.External.Model.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\CheckupMedico.Infrastructure.External.Model.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External.Model\obj\Debug\net10.0\ref\CheckupMedico.Infrastructure.External.Model.dll

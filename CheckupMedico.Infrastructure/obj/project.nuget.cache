@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "NR7+MJ6APs0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JorgeSernas\\OneDrive - PROCETI\\Documentos\\GitHub\\CheckupMedico\\CheckupMedico.Infrastructure\\CheckupMedico.Infrastructure.Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.3\\microsoft.extensions.caching.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\microsoft.extensions.caching.memory\\10.0.3\\microsoft.extensions.caching.memory.10.0.3.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.3\\microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.3\\microsoft.extensions.logging.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\microsoft.extensions.options\\10.0.3\\microsoft.extensions.options.10.0.3.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.3\\microsoft.extensions.primitives.10.0.3.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
+    "C:\\Users\\JorgeSernas\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

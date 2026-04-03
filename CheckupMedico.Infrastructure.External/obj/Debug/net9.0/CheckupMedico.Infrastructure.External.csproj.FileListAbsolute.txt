@@ -1,0 +1,11 @@
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\bin\Debug\net9.0\CheckupMedico.Infrastructure.External.deps.json
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\bin\Debug\net9.0\CheckupMedico.Infrastructure.External.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\bin\Debug\net9.0\CheckupMedico.Infrastructure.External.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\CheckupMedico.Infrastructure.External.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\CheckupMedico.Infrastructure.External.AssemblyInfoInputs.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\CheckupMedico.Infrastructure.External.AssemblyInfo.cs
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\CheckupMedico.Infrastructure.External.csproj.CoreCompileInputs.cache
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\CheckupMedico.Infrastructure.External.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\refint\CheckupMedico.Infrastructure.External.dll
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\CheckupMedico.Infrastructure.External.pdb
+C:\Users\JorgeSernas\OneDrive - PROCETI\Documentos\GitHub\CheckupMedico\CheckupMedico.Infrastructure.External\obj\Debug\net9.0\ref\CheckupMedico.Infrastructure.External.dll

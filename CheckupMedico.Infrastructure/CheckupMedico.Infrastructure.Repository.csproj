@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CheckupMedico.Domain.Repository.Interface\CheckupMedico.Domain.Repository.Interface.csproj" />
+    <ProjectReference Include="..\CheckupMedico.Domain\CheckupMedico.Domain.Entity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Files\Billing.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\Hospitals.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\Kits.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,161 @@
+[
+  {
+    "ContainingType": "CheckupMedico.Api.Controllers.AuthController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/auth/token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CheckupMedico.Application.Dto.Auth.AuthRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CheckupMedico.Application.Dto.Base.ApiResponseDto\u00601[[CheckupMedico.Application.Dto.Auth.AuthResponseDto, CheckupMedico.Application.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "CheckupMedico.Application.Dto.Base.ApiResponseDto\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "CheckupMedico.Api.Controllers.AuthController",
+    "Method": "GetCampus",
+    "RelativePath": "api/auth/user",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "CheckupMedico.Application.Dto.Auth.UserResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "CheckupMedico.Api.Controllers.CatalogController",
+    "Method": "GetCampus",
+    "RelativePath": "api/catalog/hospitals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CheckupMedico.Application.Dto.Catalog.CampusListDto, CheckupMedico.Application.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "CheckupMedico.Api.Controllers.CatalogController",
+    "Method": "GetHospitalsByCampus",
+    "RelativePath": "api/catalog/hospitals/campus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CheckupMedico.Application.Dto.Catalog.HospitalsReqDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[CheckupMedico.Application.Dto.Catalog.HospitalListDto, CheckupMedico.Application.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "CheckupMedico.Api.Controllers.CheckupController",
+    "Method": "Create",
+    "RelativePath": "api/checkup/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CheckupMedico.Application.Dto.Catalog.HospitalListDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.FileContentResult",
+        "MediaTypes": [
+          "application/pdf"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/pdf"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  }
+]
