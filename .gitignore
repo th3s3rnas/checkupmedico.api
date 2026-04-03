@@ -1,0 +1,52 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+publish/
+artifacts/
+
+# Visual Studio / IDE
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider / ReSharper
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Test / coverage
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+
+# Logs
+Logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environment / secrets overrides
+appsettings.Local.json
+appsettings.local.json
+.env
+.env.*
+
+# Generated web assets caches
+*.cache
+*.g.cs
+*.generated.cs
+
